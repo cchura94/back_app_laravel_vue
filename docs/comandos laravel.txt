@@ -1,0 +1,26 @@
+Para crear una nueva migración
+> php artisan make:migration create_personas_table
+
+Para generar un nuevo Modelo
+> php artisan make:model Persona
+
+Para generar un modelo + su migracion
+> php artisan make:model Role -m
+
+------------------------------
+Para migrar los archivos migracion
+> php artisan migrate
+
+para verificar el estado de migraciones
+> php artisan migrate:status
+
+Para revertir una migracion
+> php artisan migrate:rollback
+
+Para generar un nuevo controller
+> php artisan make:controller AuthController
+
+Para generar un nuevo seeder
+> php artisan make:seeder UserSeeder
+> php artisan make:seeder RoleSeeder
+> php artisan make:seeder PermisoSeeder

@@ -1,0 +1,13 @@
+1. descargar GIT
+    - https://git-scm.com/download/win
+2. Crear una cuenta de usuario en: (BITBUCKET, GITHUB, GITLAB)
+---------------------------------------------------------
+
+------------------ COMANDOS DE GIT ----------------------
+Si ya existe el repositorio
+ > git clone direccion_repositorio_remoto
+
+Si es un nuevo repositorio
+ > git init
+
+

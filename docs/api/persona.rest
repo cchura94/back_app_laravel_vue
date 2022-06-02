@@ -1,0 +1,47 @@
+### Admin
+GET http://127.0.0.1:8000/api/persona
+Accept: application/json
+Authorization: Bearer 8|yD8JAEwQm51qqLmNuqP32vd93NQN1OEky7oM1NcB
+
+### Pablo cajero
+GET http://127.0.0.1:8000/api/persona
+Accept: application/json
+Authorization: Bearer 9|3lCw4fJQwKYHYgLruX6cgWC3r8b2czoFmsq721FD
+
+### Juan ventas
+GET http://127.0.0.1:8000/api/persona
+Accept: application/json
+Authorization: Bearer 10|iWoGHvfP5HUhEQv3cyMuleD9MlHAsMnoOOtOrJIN
+
+### ----------------------------------- EDITAR -----------------
+### editar personas: admin - admin
+PUT http://127.0.0.1:8000/api/persona/1
+Accept: application/json
+Authorization: Bearer 8|yD8JAEwQm51qqLmNuqP32vd93NQN1OEky7oM1NcB
+
+### editar personas: pablo - cajero
+PUT http://127.0.0.1:8000/api/persona/1
+Accept: application/json
+Authorization: Bearer 9|3lCw4fJQwKYHYgLruX6cgWC3r8b2czoFmsq721FD
+
+### editar personas: juan - ventas
+PUT http://127.0.0.1:8000/api/persona/1
+Accept: application/json
+Authorization: Bearer 10|iWoGHvfP5HUhEQv3cyMuleD9MlHAsMnoOOtOrJIN
+
+### --------------------------  CREAR PERSONA --------------------------
+
+### crear persona: admin - admin
+POST http://127.0.0.1:8000/api/persona
+Accept: application/json
+Authorization: Bearer 8|yD8JAEwQm51qqLmNuqP32vd93NQN1OEky7oM1NcB
+
+### crear persona: pablo - cajero
+POST http://127.0.0.1:8000/api/persona
+Accept: application/json
+Authorization: Bearer 9|3lCw4fJQwKYHYgLruX6cgWC3r8b2czoFmsq721FD
+
+### crear persona: juan - ventas
+POST http://127.0.0.1:8000/api/persona
+Accept: application/json
+Authorization: Bearer 10|iWoGHvfP5HUhEQv3cyMuleD9MlHAsMnoOOtOrJIN

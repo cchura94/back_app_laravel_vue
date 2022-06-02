@@ -1,0 +1,42 @@
+POST http://127.0.0.1:8000/api/auth/registro
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "cristian",
+    "email": "cristian@mail.com",
+    "password": "cristian54321"
+    // "c_password": "cristian5432"
+}
+
+### login
+POST http://127.0.0.1:8000/api/auth/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "email": "cristian2@mail.com",
+    "password": "cristian54321"
+}
+
+### obtener el perfil
+GET http://127.0.0.1:8000/api/auth/perfil
+Accept: application/json
+Authorization: Bearer 7|A9zsStCSTiBzoRCMYHjjoiJVwrS4ZAS4VZB5mFpt
+
+### logout
+
+POST http://127.0.0.1:8000/api/auth/logout
+Accept: application/json
+Authorization: Bearer 6|LokD7hWwpesXnpQ2F37iC56S0hwV0KX1MkxfaJLm
+
+
+### Login
+POST http://127.0.0.1:8000/api/auth/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "email": "juan@mail.com",
+    "password": "juan54321"
+}
