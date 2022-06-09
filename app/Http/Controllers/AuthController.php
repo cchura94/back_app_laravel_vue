@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class AuthController extends Controller
 {
@@ -73,8 +74,14 @@ class AuthController extends Controller
 
     public function perfil(Request $request)
     {
-        $this->authorize("listar_cliente");
-        // responder el perfil
+        /*
+        $user = Auth::user();
+        $user->persona = "Otro Dato";
+        return $user;
+        */
+        // $this->authorize("listar_cliente");
+        // responder el perfil        
+
         $usuario = $request->user();
         return response()->json($usuario);
 

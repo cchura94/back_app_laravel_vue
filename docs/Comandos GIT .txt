@@ -10,4 +10,10 @@ Si ya existe el repositorio
 Si es un nuevo repositorio
  > git init
 
+Para registrar el repositorio remoto
+> git remote add origin https://github.com/cchura94/back_app_laravel_vue.git
+-----------------------------
 
+> git add .
+> git commit -m "Roles y Permisos Api rest"
+> git push -u origin master

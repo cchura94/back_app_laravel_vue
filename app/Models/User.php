@@ -62,4 +62,5 @@ class User extends Authenticatable
         // ["listar_cliente", "crear_cliente", "editar_cliente"]
         return $this->roles->map->permisos->flatten()->pluck('nombre')->unique();
     }
+
 }
