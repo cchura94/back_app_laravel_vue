@@ -28,4 +28,10 @@ Route::group(['prefix' => 'auth'], function(){
 Route::group(['middleware' => 'auth:sanctum'], function(){
     // /api
     Route::apiResource("persona", PersonaController::class);
+    Route::apiResource("categoria", CategoriaController::class);
+    Route::apiResource("producto", ProductoController::class);
+    Route::apiResource("cliente", ClienteController::class);
+    Route::apiResource("pedido", PedidoController::class);
+    
+    
 });

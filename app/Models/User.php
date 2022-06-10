@@ -63,4 +63,9 @@ class User extends Authenticatable
         return $this->roles->map->permisos->flatten()->pluck('nombre')->unique();
     }
 
+    public function pedidos()
+    {
+        return $this->hasMany(Pedido::class);
+    }
+
 }
