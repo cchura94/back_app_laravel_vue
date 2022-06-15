@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('pedido_producto', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger("producto_id")->unsigned();
+            $table->bigInteger("pedido_id")->unsigned();
+            $table->integer("cantidad")->default(1);
+            // N:M
+            $table->foreign("pedido_id")->references("id")->on("pedidos");
+            $table->foreign("producto_id")->references("id")->on("productos");
             $table->timestamps();
         });
     }
