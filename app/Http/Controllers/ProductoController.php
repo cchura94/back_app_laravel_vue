@@ -14,7 +14,7 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        $productos = Producto::paginate(2);
+        $productos = Producto::with('categoria')->paginate(10);
 
         return response()->json($productos, 200);
     }
@@ -37,6 +37,7 @@ class ProductoController extends Controller
         $prod->nombre = $request->nombre;
         $prod->precio = $request->precio;
         $prod->stock = $request->stock;
+        $prod->categoria_id = $request->categoria_id;
         $prod->descripcion = $request->descripcion;
         $prod->save();
 

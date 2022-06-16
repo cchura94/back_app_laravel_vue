@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('productos', function (Blueprint $table) {
-            $table->string("imagen")->after("estado");
+            $table->string("imagen")->after("estado")->nullable();
         });
     }
 
@@ -26,7 +26,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('productos', function (Blueprint $table) {
-            //
+            $table->dropColumn('imagen');
         });
     }
 };
