@@ -34,10 +34,14 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
     Route::post("/producto/actualizar-imagen", [ProductoController::class, "actualizarImagen"]);
     // /api
     Route::apiResource("persona", PersonaController::class);
-    Route::apiResource("cliente", ClienteController::class);
+    // Route::apiResource("cliente", ClienteController::class);
     Route::apiResource("pedido", PedidoController::class);
     
     Route::apiResource("producto", ProductoController::class);
     Route::apiResource("categoria", CategoriaController::class);
     
+});
+
+Route::get("prueba", function(){
+    return response()->json("Mensaje");
 });
