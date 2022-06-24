@@ -12,9 +12,10 @@ class ProductoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $productos = Producto::with('categoria')->paginate(10);
+        $filas = $request->rows?$request->rows:5;
+        $productos = Producto::with('categoria')->paginate($filas);
 
         return response()->json($productos, 200);
     }
@@ -78,5 +79,19 @@ class ProductoController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function actualizarImagen(Request $request)
+    {
+        if($file = $request->file("imagen")){
+            $direccion_archivo = time() . "-" . $file->getClientOriginalName();
+            $file->move("imagenes/", $direccion_archivo);
+
+            $prod = Producto::find($request->producto_id);
+            $prod->imagen = "imagenes/$direccion_archivo";
+            $prod->save();
+
+            return response()->json(["mensaje" => "Imagen Actualizada"]);
+        }
     }
 }
